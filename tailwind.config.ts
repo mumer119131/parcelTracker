@@ -58,5 +58,5 @@ export default {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("tw-elements/plugin.cjs")],
 } satisfies Config;
