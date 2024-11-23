@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
+import Logo from "@/public/parcel-logo.png";
 const Navbar = () => {
   return (
     <nav className="bg-white shadow-md">
         <div className="container mx-auto px-4 py-2 flex justify-between items-center">
             <div className="flex items-center gap-2">
-                <Image src="/next.svg" alt="Logo" width={50} height={50} />
-                <h1 className="text-xl font-bold">My App</h1>
+                <Image src={Logo} alt="Logo" width={50} height={50} />
+                <h1 className="text-xl font-bold">Trackify</h1>
             </div>
             <ul className="hidden md:flex space-x-4">
                 <li>

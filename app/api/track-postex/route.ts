@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
     } catch (error) {
       console.error(error);
       const errorResponse: TrackingResponseError = {
-        error: 'Error fetching tracking information.',
+        error: 'Error fetching tracking information. Make sure the tracking ID is correct.',
       };
       return NextResponse.json(errorResponse, { status: 500 });
     }
