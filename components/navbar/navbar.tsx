@@ -15,7 +15,7 @@ const Navbar = () => {
                     <Link href="/" className="text-gray-700 hover:text-gray-900">Home</Link>
                 </li>
                 <li>
-                    <Link href="/postex-search" className="text-gray-700 hover:text-gray-900">PostEx</Link>
+                    <Link href="/postex" className="text-gray-700 hover:text-gray-900">PostEx</Link>
                 </li>
                 <li>
                     <Link href="/contact" className="text-gray-700 hover:text-gray-900">Contact</Link>
