@@ -5,17 +5,20 @@ import Logo from "@/public/parcel-logo.png";
 const Navbar = () => {
   return (
     <nav className="bg-white shadow-md">
-        <div className="container mx-auto px-4 py-2 flex justify-between items-center">
-            <div className="flex items-center gap-2">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+            <Link href="/" className="flex items-center gap-2">
                 <Image src={Logo} alt="Logo" width={50} height={50} />
                 <h1 className="text-xl font-bold">Trackify</h1>
-            </div>
+            </Link>
             <ul className="hidden md:flex space-x-4">
                 <li>
                     <Link href="/" className="text-gray-700 hover:text-gray-900">Home</Link>
                 </li>
                 <li>
                     <Link href="/postex" className="text-gray-700 hover:text-gray-900">PostEx</Link>
+                </li>
+                <li>
+                    <Link href="/leopards" className="text-gray-700 hover:text-gray-900">Leopards</Link>
                 </li>
                 <li>
                     <Link href="/contact" className="text-gray-700 hover:text-gray-900">Contact</Link>
