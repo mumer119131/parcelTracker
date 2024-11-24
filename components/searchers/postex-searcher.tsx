@@ -1,19 +1,14 @@
 "use client"
 import React from 'react'
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-  } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Button } from '@/components/ui/button'
 import { TrackingData } from '@/types/response'
+import { AdSenseAdUnit } from '../AdsenseAdUnit'
+import { SearchCard } from './searcher-card'
+interface PostExSearcherProps {
+    courierName?: string
+    idName?: string
+}
 
-export const PostExSearcher = () => {
+export const PostExSearcher = ({courierName, idName = "Tracking Id"}: PostExSearcherProps) => {
     const [trackingId, setTrackingId] = React.useState('')
     const [error, setError] = React.useState('')
     const [trackingInfo, setTrackingInfo] = React.useState<TrackingData | null>(null)
@@ -51,30 +46,10 @@ export const PostExSearcher = () => {
   return (
     <div className='flex justify-center'>
         <div className='container flex justify-center flex-col items-center py-10'>
-            <h1 className="text-2xl font-bold mb-4">PostEx Tracking</h1>
-            <Card className="w-[350px]">
-            <CardHeader>
-                <CardTitle>Track the PostEx Parcels</CardTitle>
-                <CardDescription>Enter Your PostEx parcel tracking ID down to track it.s</CardDescription>
-            </CardHeader>
-            <CardContent>
-                <form onSubmit={handleSubmit} className=''>
-                    <div className="grid w-full items-center gap-4">
-                        <div className="flex flex-col space-y-1.5">
-                        <Label htmlFor="name">Tracking Id</Label>
-                        <Input id="trackingId" placeholder="Tracking Id #" value={trackingId} onChange={(e)=> { setTrackingId(e.target.value) }} />
-                        </div>
-                    </div>
-                    <CardFooter className="flex justify-between p-0 py-4 pb-2">
-                        <Button variant="outline" type="reset">Reset</Button>
-                        <Button type="submit">Search</Button>
-                    </CardFooter>
-                    {error && <p className="text-red-500">{error}</p>}
-                </form>
-            </CardContent>
-            </Card>
+            <AdSenseAdUnit dataAdSlot="3542902647" dataAdFormat="auto" dataFullWidthResponsive={true} />
+            <h1 className="text-2xl font-bold mb-4">{courierName} Tracking</h1>
 
-            
+            <SearchCard courierName={courierName} idName={idName} error={error} trackingId={trackingId} setTrackingId={setTrackingId} handleSubmit={handleSubmit} />
             
             {trackingInfo && (
             <div className="mt-6 px-4 md:px-0">

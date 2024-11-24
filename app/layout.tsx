@@ -5,6 +5,7 @@ import { Navbar } from "@/components/navbar/navbar";
 import { Analytics } from "@vercel/analytics/react"
 import Head from "next/head";
 import Footer from "@/components/footer/footer";
+import AdSense from "@/components/Adsense";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -16,7 +17,7 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
-
+const pId = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID ?? "";
 export const metadata: Metadata = {
   title: "Trackify - Track your parcels",
   description: "Trackify is a simple parcel tracking app that helps you track your parcels from different courier services.",
@@ -31,6 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <link rel="icon" href="/favicon-new.ico" />
+        <AdSense pId={pId}/>
       </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
