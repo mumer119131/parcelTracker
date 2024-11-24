@@ -46,7 +46,7 @@ export const LeopardsSearcher = ({courierName, idName = "Tracking Id"}: PostExSe
   return (
     <div className='flex justify-center'>
         <div className='container flex justify-center flex-col items-center py-10'>
-            <AdSenseAdUnit dataAdSlot="1646171504" dataAdFormat="auto" dataFullWidthResponsive={true} />
+            <AdSenseAdUnit dataAdSlot="3542902647" dataAdFormat="auto" dataFullWidthResponsive={true} />
             <h1 className="text-2xl font-bold mb-4">{courierName} Tracking</h1>
 
             <SearchCard courierName={courierName} idName={idName} error={error} trackingId={trackingId} setTrackingId={setTrackingId} handleSubmit={handleSubmit} />

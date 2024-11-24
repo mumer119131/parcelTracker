@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/react"
 import Head from "next/head";
 import Footer from "@/components/footer/footer";
 import AdSense from "@/components/Adsense";
+import Script from "next/script";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -38,6 +39,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1659754718895137"
+            crossOrigin="anonymous"></Script>
         <Navbar />
         {children}
         <Footer />
