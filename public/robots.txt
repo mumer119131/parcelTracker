@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://trackify.umer.tech/
+
+# Sitemaps
+Sitemap: https://trackify.umer.tech/sitemap.xml
