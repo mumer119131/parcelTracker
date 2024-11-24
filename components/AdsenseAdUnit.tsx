@@ -23,15 +23,16 @@ export const AdSenseAdUnit = ({ dataAdSlot, dataAdFormat, dataFullWidthResponsiv
         }
     }, []);
     return (
-    <>
-    <ins className="adsbygoogle"
-     style={{display: "block"}}
-     data-ad-client={`ca-pub-${pId}`}
-     data-ad-slot={dataAdSlot}
-     data-ad-format={dataAdFormat}
-     data-full-width-responsive={dataFullWidthResponsive.toString()}></ins>
+      <div className="w-full md:w-1/2 xl:w-1/3">
+
+        <ins className="adsbygoogle"
+        style={{display: "block"}}
+        data-ad-client={`ca-pub-${pId}`}
+        data-ad-slot={dataAdSlot}
+        data-ad-format={dataAdFormat}
+        data-full-width-responsive={dataFullWidthResponsive.toString()}></ins>
    
-     </>
+     </div>
      
   )
 }

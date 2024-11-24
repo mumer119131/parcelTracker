@@ -34,8 +34,6 @@ export default function RootLayout({
         <link rel="icon" href="/favicon-new.ico" />
         <AdSense pId={pId}/>
         <meta name="google-adsense-account" content="ca-pub-1659754718895137"></meta>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1659754718895137"
-            crossOrigin="anonymous"></script>
       </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
