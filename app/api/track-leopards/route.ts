@@ -1,4 +1,3 @@
-import { TrackingResponseError, TrackingResponse } from '@/types/response';
 import { NextResponse, NextRequest } from 'next/server';
 import { getLeopardsData } from '@/utils/scrapers/leopards';
 
