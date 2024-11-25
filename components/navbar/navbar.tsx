@@ -3,7 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/public/parcel-logo.png";
 const Navbar = () => {
-  return (
+    const links = [
+        { name: "Home", path: "/" },
+        { name: "PostEx", path: "/postex" },
+        { name: "Leopards", path: "/leopards" },
+        { name: "Contact", path: "/contact" },
+        { name: "About", path: "/about" },
+    ]
+    return (
     <nav className="bg-white shadow-md">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
             <Link href="/" className="flex items-center gap-2">
@@ -11,18 +18,12 @@ const Navbar = () => {
                 <h1 className="text-xl font-bold">Trackify</h1>
             </Link>
             <ul className="hidden md:flex space-x-4">
-                <li>
-                    <Link href="/" className="text-gray-700 hover:text-gray-900">Home</Link>
-                </li>
-                <li>
-                    <Link href="/postex" className="text-gray-700 hover:text-gray-900">PostEx</Link>
-                </li>
-                <li>
-                    <Link href="/leopards" className="text-gray-700 hover:text-gray-900">Leopards</Link>
-                </li>
-                <li>
-                    <Link href="/contact" className="text-gray-700 hover:text-gray-900">Contact</Link>
-                </li>
+                {links.map((link, index) => (
+                    <li key={index}>
+                        <Link href={link.path} className="text-gray-700 hover:text-gray-900">{link.name}</Link>
+                    </li>
+                ))}
+                
             </ul>
             <div className="md:hidden">
                 <button className="text-gray-700 focus:outline-none">

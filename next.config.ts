@@ -10,6 +10,12 @@ const nextConfig: NextConfig = {
         port: '', // Leave empty if no specific port
         pathname: '/img/**', // Adjust the path pattern to match the image path
       },
+      {
+        protocol: 'https',
+        hostname: 'via.placeholder.com',
+        port: '', // Leave empty if no specific port
+        pathname: '/img/**', // Adjust the path pattern to match the image path
+      },
     ],
   },
 };
